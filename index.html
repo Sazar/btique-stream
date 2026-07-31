@@ -27,7 +27,6 @@
             
             <ul class="nav-menu">
                 <li><a href="#home">Accueil</a></li>
-                <li><a href="#products">Produits</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#about">À Propos</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -35,6 +34,8 @@
             
             <div class="nav-actions">
                 <button class="theme-toggle" id="themeToggle" aria-label="Basculer le thème">
+                    <i class="fas fa-sun sun-icon"></i>
+                    <i class="fas fa-moon moon-icon"></i>
                     <span class="toggle-slider"></span>
                 </button>
                 <a href="#account" class="btn-account">
@@ -65,7 +66,7 @@
                     <a href="#portfolio" class="btn btn-primary">
                         <i class="fas fa-play"></i> Voir le Portfolio
                     </a>
-                    <a href="#products" class="btn btn-secondary">
+                    <a href="#" class="btn btn-secondary" onclick="showShop(); return false;">
                         <i class="fas fa-shopping-bag"></i> Accéder à la Boutique
                     </a>
                 </div>
@@ -111,28 +112,28 @@
         <div class="container">
             <h2 class="section-title">Nos Catégories</h2>
             <div class="categories-grid">
-                <a href="#products?cat=emotes" class="category-card">
+                <a href="#" onclick="showShop('emotes'); return false;" class="category-card">
                     <div class="category-icon">
                         <i class="fas fa-laugh-beam"></i>
                     </div>
                     <h3>Émoticônes</h3>
                     <p>Packs d'émoticônes personnalisés pour Twitch, Discord et plus</p>
                 </a>
-                <a href="#products?cat=overlays" class="category-card">
+                <a href="#" onclick="showShop('overlays'); return false;" class="category-card">
                     <div class="category-icon">
                         <i class="fas fa-border-all"></i>
                     </div>
                     <h3>Overlays</h3>
                     <p>Designs professionnels pour vos streams gaming, IRL et événements</p>
                 </a>
-                <a href="#products?cat=widgets" class="category-card">
+                <a href="#" onclick="showShop('widgets'); return false;" class="category-card">
                     <div class="category-icon">
                         <i class="fas fa-sliders-h"></i>
                     </div>
                     <h3>Widgets</h3>
                     <p>Outils interactifs pour engager votre audience en direct</p>
                 </a>
-                <a href="#products?cat=alerts" class="category-card">
+                <a href="#" onclick="showShop('alerts'); return false;" class="category-card">
                     <div class="category-icon">
                         <i class="fas fa-bell"></i>
                     </div>
@@ -143,8 +144,8 @@
         </div>
     </section>
 
-    <!-- Products Section -->
-    <section id="products" class="products">
+    <!-- Products Section (Hidden from homepage, accessible via categories) -->
+    <section id="products" class="products" style="display: none;">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Boutique</h2>
@@ -433,7 +434,7 @@
                     <h4>Liens Rapides</h4>
                     <ul>
                         <li><a href="#home">Accueil</a></li>
-                        <li><a href="#products">Boutique</a></li>
+                        <li><a href="#" onclick="showShop(); return false;">Boutique</a></li>
                         <li><a href="#portfolio">Portfolio</a></li>
                         <li><a href="#about">À Propos</a></li>
                     </ul>
@@ -488,5 +489,27 @@
     <div class="cart-overlay" id="cartOverlay"></div>
 
     <script src="js/main.js"></script>
+    <script>
+        // Show shop function
+        function showShop(category = 'all') {
+            const productsSection = document.getElementById('products');
+            productsSection.style.display = 'block';
+            
+            // Scroll to products section
+            productsSection.scrollIntoView({ behavior: 'smooth' });
+            
+            // Apply filter if category specified
+            if (category !== 'all') {
+                setTimeout(() => {
+                    const filterButtons = document.querySelectorAll('.filter-btn');
+                    filterButtons.forEach(btn => {
+                        if (btn.getAttribute('data-filter') === category) {
+                            btn.click();
+                        }
+                    });
+                }, 500);
+            }
+        }
+    </script>
 </body>
 </html>
