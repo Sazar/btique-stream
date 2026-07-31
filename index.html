@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamStore - Produits Numériques pour Streamers</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i class="fas fa-gamepad"></i>
+                <span>StreamStore</span>
+            </a>
+            
+            <ul class="nav-menu">
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#products">Produits</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#about">À Propos</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Basculer le thème">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="#shop" class="btn-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Améliorez Votre <span class="gradient-text">Stream</span> avec des Assets Professionnels
+                </h1>
+                <p class="hero-subtitle">
+                    Découvrez notre collection d'overlays, émoticônes, widgets et bien plus encore pour transformer votre chaîne de streaming.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#products" class="btn btn-primary">
+                        <i class="fas fa-shopping-bag"></i> Voir la Boutique
+                    </a>
+                    <a href="#portfolio" class="btn btn-secondary">
+                        <i class="fas fa-play"></i> Voir le Portfolio
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Produits</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">10k+</span>
+                        <span class="stat-label">Clients</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">98%</span>
+                        <span class="stat-label">Satisfaction</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-visual">
+                    <div class="floating-card card-1">
+                        <i class="fas fa-smile"></i>
+                        <span>Émoticônes</span>
+                    </div>
+                    <div class="floating-card card-2">
+                        <i class="fas fa-layer-group"></i>
+                        <span>Overlays</span>
+                    </div>
+                    <div class="floating-card card-3">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Widgets</span>
+                    </div>
+                    <div class="main-visual">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Nos Catégories</h2>
+            <div class="categories-grid">
+                <a href="#products?cat=emotes" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-laugh-beam"></i>
+                    </div>
+                    <h3>Émoticônes</h3>
+                    <p>Packs d'émoticônes personnalisés pour Twitch, Discord et plus</p>
+                </a>
+                <a href="#products?cat=overlays" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-border-all"></i>
+                    </div>
+                    <h3>Overlays</h3>
+                    <p>Designs professionnels pour vos streams gaming, IRL et événements</p>
+                </a>
+                <a href="#products?cat=widgets" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-sliders-h"></i>
+                    </div>
+                    <h3>Widgets</h3>
+                    <p>Outils interactifs pour engager votre audience en direct</p>
+                </a>
+                <a href="#products?cat=alerts" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3>Alertes</h3>
+                    <p>Animations dynamiques pour abonnements, dons et nouveaux followers</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Boutique</h2>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">Tous</button>
+                    <button class="filter-btn" data-filter="emotes">Émoticônes</button>
+                    <button class="filter-btn" data-filter="overlays">Overlays</button>
+                    <button class="filter-btn" data-filter="widgets">Widgets</button>
+                    <button class="filter-btn" data-filter="alerts">Alertes</button>
+                </div>
+            </div>
+            
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card" data-category="emotes">
+                    <div class="product-badge">Bestseller</div>
+                    <div class="product-image">
+                        <i class="fas fa-smile-wink"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3>Pack Émoticônes Gaming</h3>
+                        <p class="product-desc">50+ émoticônes uniques pour votre communauté</p>
+                        <div class="product-price">
+                            <span class="price">€29.99</span>
+                            <span class="old-price">€39.99</span>
+                        </div>
+                        <button class="btn-add-cart" data-product="Pack Émoticônes Gaming" data-price="29.99">
+                            <i class="fas fa-cart-plus"></i> Ajouter
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card" data-category="overlays">
+                    <div class="product-image">
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3>Overlay Stream Pro</h3>
+                        <p class="product-desc">Pack complet overlay pour stream professionnel</p>
+                        <div class="product-price">
+                            <span class="price">€49.99</span>
+                        </div>
+                        <button class="btn-add-cart" data-product="Overlay Stream Pro" data-price="49.99">
+                            <i class="fas fa-cart-plus"></i> Ajouter
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card" data-category="widgets">
+                    <div class="product-badge new">Nouveau</div>
+                    <div class="product-image">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3>Widget Dashboard</h3>
+                        <p class="product-desc">Tableau de bord interactif pour vos viewers</p>
+                        <div class="product-price">
+                            <span class="price">€24.99</span>
+                        </div>
+                        <button class="btn-add-cart" data-product="Widget Dashboard" data-price="24.99">
+                            <i class="fas fa-cart-plus"></i> Ajouter
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card" data-category="alerts">
+                    <div class="product-image">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3>Pack Alertes Animées</h3>
+                        <p class="product-desc">Animations fluides pour tous types d'événements</p>
+                        <div class="product-price">
+                            <span class="price">€34.99</span>
+                            <span class="old-price">€44.99</span>
+                        </div>
+                        <button class="btn-add-cart" data-product="Pack Alertes Animées" data-price="34.99">
+                            <i class="fas fa-cart-plus"></i> Ajouter
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card" data-category="emotes">
+                    <div class="product-image">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3>Émoticônes Custom</h3>
+                        <p class="product-desc">Création sur mesure de vos émoticônes</p>
+                        <div class="product-price">
+                            <span class="price">€59.99</span>
+                        </div>
+                        <button class="btn-add-cart" data-product="Émoticônes Custom" data-price="59.99">
+                            <i class="fas fa-cart-plus"></i> Ajouter
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card" data-category="overlays">
+                    <div class="product-badge">-30%</div>
+                    <div class="product-image">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3>Pack Overlay Gaming</h3>
+                        <p class="product-desc">Thèmes variés pour différents jeux vidéo</p>
+                        <div class="product-price">
+                            <span class="price">€39.99</span>
+                            <span class="old-price">€59.99</span>
+                        </div>
+                        <button class="btn-add-cart" data-product="Pack Overlay Gaming" data-price="39.99">
+                            <i class="fas fa-cart-plus"></i> Ajouter
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title">Portfolio</h2>
+            <p class="section-subtitle">Découvrez nos créations en action sur des chaînes réelles</p>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-thumbnail">
+                        <i class="fas fa-video"></i>
+                        <div class="portfolio-overlay">
+                            <h4>Setup Gaming Pro</h4>
+                            <p>Overlay + Alerts + Widgets</p>
+                            <button class="btn-view"><i class="fas fa-eye"></i> Voir</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-thumbnail">
+                        <i class="fas fa-video"></i>
+                        <div class="portfolio-overlay">
+                            <h4>Stream IRL</h4>
+                            <p>Pack complet personnalisé</p>
+                            <button class="btn-view"><i class="fas fa-eye"></i> Voir</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-thumbnail">
+                        <i class="fas fa-video"></i>
+                        <div class="portfolio-overlay">
+                            <h4>Event Stream</h4>
+                            <p>Overlay événementiel</p>
+                            <button class="btn-view"><i class="fas fa-eye"></i> Voir</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-thumbnail">
+                        <i class="fas fa-video"></i>
+                        <div class="portfolio-overlay">
+                            <h4>Just Chatting</h4>
+                            <p>Interface conversationnelle</p>
+                            <button class="btn-view"><i class="fas fa-eye"></i> Voir</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container about-container">
+            <div class="about-content">
+                <h2 class="section-title">À Propos de StreamStore</h2>
+                <p>
+                    Nous sommes une équipe de passionnés de streaming et de design graphique. 
+                    Notre mission est de fournir aux streamers des outils professionnels pour 
+                    améliorer la qualité de leurs contenus et engager leur communauté.
+                </p>
+                <p>
+                    Depuis 2020, nous avons aidé plus de 10 000 streamers à transformer leurs 
+                    chaînes avec des assets de qualité professionnelle.
+                </p>
+                <div class="features">
+                    <div class="feature">
+                        <i class="fas fa-bolt"></i>
+                        <span>Livraison Instantanée</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-headset"></i>
+                        <span>Support 24/7</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-sync"></i>
+                        <span>Mises à Jour Gratuites</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <div class="about-visual">
+                    <i class="fas fa-users"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contactez-Nous</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>contact@streamstore.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-discord"></i>
+                        <div>
+                            <h4>Discord</h4>
+                            <p>Rejoignez notre serveur</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-twitter"></i>
+                        <div>
+                            <h4>Twitter</h4>
+                            <p>@StreamStore</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Votre nom" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Votre email" required>
+                    </div>
+                    <div class="form-group">
+                        <select>
+                            <option value="">Sujet</option>
+                            <option value="support">Support technique</option>
+                            <option value="custom">Commande personnalisée</option>
+                            <option value="partnership">Partenariat</option>
+                            <option value="other">Autre</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Votre message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Envoyer
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="#" class="logo">
+                        <i class="fas fa-gamepad"></i>
+                        <span>StreamStore</span>
+                    </a>
+                    <p>Votre destination pour des assets de streaming professionnels.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Liens Rapides</h4>
+                    <ul>
+                        <li><a href="#home">Accueil</a></li>
+                        <li><a href="#products">Boutique</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#about">À Propos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Catégories</h4>
+                    <ul>
+                        <li><a href="#">Émoticônes</a></li>
+                        <li><a href="#">Overlays</a></li>
+                        <li><a href="#">Widgets</a></li>
+                        <li><a href="#">Alertes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Légal</h4>
+                    <ul>
+                        <li><a href="#">CGV</a></li>
+                        <li><a href="#">Confidentialité</a></li>
+                        <li><a href="#">Mentions Légales</a></li>
+                        <li><a href="#">Remboursements</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 StreamStore. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Votre Panier</h3>
+            <button class="close-cart" id="closeCart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Items will be added here dynamically -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">€0.00</span>
+            </div>
+            <button class="btn btn-primary btn-checkout">
+                <i class="fas fa-credit-card"></i> Commander
+            </button>
+        </div>
+    </div>
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
